@@ -8,9 +8,15 @@ fix-koha-conf
 
     ./fix-koha-conf.sh mykoha
 
-=head1 WARNING! 
+=head1 WARNINGS!
 
 This is very much an ongoing WORK IN PROGRESS!
+
+This script WILL NOT preserve custom changes to config files, apart from
+passwords in koha-conf.xml!
+
+Make sure you read through fix-koha-conf.sh and that you understand what it
+does BEFORE running the script.
 
 =head1 BACKGROUND
 
@@ -26,9 +32,16 @@ See the following Koha bug reports for why this script is necessary:
 
 =head1 PREPARATION
 
+A couple of sample config templates are provided along with the main script,
+but these are only intended as examples, you need to create your own templates
+before you use the script. (If you use the provided templates as is, your
+instances will be set up to use NORMARC indexing. You probably don't want
+that.) Here is how to create new templates:
+
 =over 4
 
-=item * Make sure your package installation of Koha is as up to date as you want it to be
+=item * Make sure your package installation of Koha is as up to date as you want
+it to be
 
 =item * Create a new instance, e.g. fixconfig
 
