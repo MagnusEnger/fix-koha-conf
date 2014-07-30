@@ -24,6 +24,31 @@ See the following Koha bug reports for why this script is necessary:
 
 =back
 
+=head1 PREPARATION
+
+=over 4
+
+=item * Make sure your package installation of Koha is as up to date as you want it to be
+
+=item * Create a new instance, e.g. fixconfig
+
+=item * Copy the relevant config files to the same directory as fix-koha-conf.sh, 
+and give them a ".template" extension:
+
+=over 8
+
+=item * cp /etc/koha/sites/fixconfig/koha-conf.xml koha-conf.xml.template
+
+=item * cp /etc/koha/sites/fixconfig/zebra-biblios-dom.cfg zebra-biblios-dom.cfg.template
+
+=back
+
+=item * Replace "fixconfig" with "__INSTANCENAME__" in both files
+
+=item * Replace passwords in koha-conf.xml with relevant placeholders
+
+=back
+
 =head1 AUTHOR
 
 Magnus Enger, magnus@enger.prv.no
