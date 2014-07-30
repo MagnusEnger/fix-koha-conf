@@ -2,10 +2,6 @@
 
 # WARNING! This is very much an ongoing WORK IN PROGRESS!
 
-# See the following Koha bug reports for why this script is necessary:
-# http://bugs.koha-community.org/bugzilla3/show_bug.cgi?id=12584
-# http://bugs.koha-community.org/bugzilla3/show_bug.cgi?id=12577
-
 # Check that we are root
 if [ "$(whoami)" != "root" ]; then
     echo "Sorry, you are not root."
